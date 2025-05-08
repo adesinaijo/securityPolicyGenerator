@@ -1,0 +1,70 @@
+# {{org_name}} Security Policy
+**Effective Date:** {{date}}
+
+## 1. Introduction
+This security policy outlines the cybersecurity standards and practices followed by {{org_name}} to ensure the confidentiality, integrity, and availability of information. This policy applies to all employees, contractors, and other authorized users of {{org_name}}'s information systems.
+
+## 2. Core Principles
+- **Password Management:** All employees are required to use a password manager.
+- **Multi-Factor Authentication (MFA):** MFA is mandatory for all employees in the {{employee_tier}} tier.
+
+## 3. Work Model Rules
+{{#if work_model == 'remote'}}
+- All employees working remotely must use a VPN to access company resources.
+- Employees must attend bi-weekly security training sessions.
+{{#elif work_model == 'hybrid'}}
+- Company-issued devices must be used for all work-related activities.
+- Office access logs will be retained for 30 days.
+{{else}}
+- Physical security audits are conducted quarterly in all office locations.
+{{/if}}
+
+## 4. Data Handling
+- **Data Classification:** Data will be handled according to the {{compliance_standard}} standards.
+- **Data Retention:** 
+  {{#if employee_tier == 'large'}}
+  - Data will be retained for 5 years.
+  {{else}}
+  - Data will be retained for 3 years.
+  {{/if}}
+
+## 5. Review Cycle
+{{#switch employee_tier}}
+  {{#case 'micro'}}
+  - An annual review of the security policy will be conducted.
+  {{/case}}
+  {{#case 'small'}}
+  - A bi-annual review of the security policy will be conducted.
+  {{/case}}
+  {{#default}}
+  - A quarterly review of the security policy will be conducted.
+  {{/default}}
+{{/switch}}
+
+## 6. Compliance and Audits
+{{#if compliance_standard == 'GDPR'}}
+- This policy complies with the General Data Protection Regulation (GDPR).
+{{#elif compliance_standard == 'HIPAA'}}
+- This policy complies with the Health Insurance Portability and Accountability Act (HIPAA).
+{{#elif compliance_standard == 'ISO 27001'}}
+- This policy complies with the ISO 27001 standard for Information Security.
+{{#elif compliance_standard == 'PCI DSS'}}
+- This policy complies with the Payment Card Industry Data Security Standard (PCI DSS).
+{{#elif compliance_standard == 'SOC 2'}}
+- This policy complies with the SOC 2 standard for service organizations.
+{{#elif compliance_standard == 'NIST CSF'}}
+- This policy complies with the NIST Cybersecurity Framework (CSF).
+{{#elif compliance_standard == 'CIS Controls'}}
+- This policy follows the Center for Internet Security (CIS) Critical Security Controls.
+{{#else}}
+- This policy follows industry best practices for data security and compliance.
+{{/if}}
+
+## 7. Employee Responsibilities
+All employees are responsible for:
+- Complying with this security policy and all related procedures.
+- Reporting security incidents to the security team immediately.
+- Keeping their access credentials confidential and secure.
+
+## 8. Conclusion
+This security policy is essential to maintaining the security of {{org_name}}'s information systems and data. Adherence to these guidelines is mandatory for all employees, and violations will result in disciplinary actions.
