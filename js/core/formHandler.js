@@ -2,7 +2,7 @@ import { setGeneratingState, setSuccessState, setErrorState } from '../outputs/u
 import { sanitize } from '../utilities/sanitizer.js';
 import { getEmployeeTier, formatPolicyDate } from '../utilities/helpers.js';
 
-const GEMINI_API_KEY = "AIzaSyAzKi6UryY34ovFbOcQAbHJndX79sBLdsg"; // Use the actual API key
+const GEMINI_API_KEY = "YOUR_API_KEY"; // Use the actual API key
 
 async function listAvailableModels() {
   try {
